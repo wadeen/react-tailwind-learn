@@ -7,7 +7,7 @@ type Props = {
 
 const GlobalLayout: React.FC<Props> = ({ children }) => {
   return (
-    <div>
+    <div className="bg-slate-200">
       <GlobalHeader />
       <main>{children}</main>
       <GlobalFooter />

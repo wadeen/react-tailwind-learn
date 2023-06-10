@@ -1,7 +1,7 @@
 const GlobalFooter = () => {
   return (
-    <footer>
-      <div>フッター</div>
+    <footer className="py-4 bg-gray-600 text-white text-center">
+      <small>©2018 DIGSMILE INC.</small>
     </footer>
   );
 };
