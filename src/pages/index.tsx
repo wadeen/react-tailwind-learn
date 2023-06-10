@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <main className="text-center">
-      <div className="">あああ</div>
-    </main>
+    <div className="container bg-tomato mx-auto">
+      <div className="font-monster">テスト!!!</div>
+    </div>
   );
 }

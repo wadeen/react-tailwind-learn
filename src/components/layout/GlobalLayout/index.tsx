@@ -7,9 +7,9 @@ type Props = {
 
 const GlobalLayout: React.FC<Props> = ({ children }) => {
   return (
-    <div className="bg-slate-200">
+    <div className="flex flex-col min-h-screen bg-bg-secondary">
       <GlobalHeader />
-      <main>{children}</main>
+      <main className='flex-grow'>{children}</main>
       <GlobalFooter />
     </div>
   );

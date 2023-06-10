@@ -18,28 +18,43 @@ module.exports = {
       "bg-secondary": "#F0F0F0",
       "text-main": "#333333",
       "border-main": "#DDDDDD",
+      "tomato": "tomato"
     },
     fontFamily: {
-      sans: ["Noto Sans JP", "sans-serif"],
-      inter: ["'Inter'", "sans-serif"],
+      monster: ['Montserrat', "sans-serif"],
+      gothic: [ "游ゴシック体", "Yu Gothic", "YuGothic", "sans-serif"],
     },
-    // fontSize: {
-    //   // 1 ~ 100px
-    //   // usage: text-1, text-2, text-3, ...
-    //   ...Object.fromEntries([...Array(100)].map((_, i) => i + 1).map((num) => [num, `${num}px`])),
-    //   // Text sizes:
-    //   body: ["16px", "170%"],
-    //   bodySmall: ["14px", "170%"],
-    //   caption: ["12px", "130%"],
-    //   captionSmall: ["10px", "130%"],
-    //   link: ["16px", "170%"],
-
-    //   // Heading sizes:
-    //   "heading-1": ["49px", "150%"],
-    //   "heading-2": ["40px", "150%"],
-    //   "heading-3": ["32px", "150%"],
-    //   "heading-4": ["24px", "150%"],
-    // },
+    fontSize: {
+      // 1 ~ 100px
+      // usage: text-1, text-2, text-3, ...
+      ...Object.fromEntries(
+        [...Array(100)].map((_, i) => i + 1).map((num) => [num, `${num}px`]),
+      ),
+      // Text sizes:
+      body: ['16px', '170%'],
+      bodySmall: ['10px', '170%'],
+      caption: ['12px', '130%'],
+      captionSmall: ['10px', '130%'],
+      link: ['16px', '170%'],
+    },
+    container: {
+      screens: {
+        // 1100pxまでしか広がらないように
+        '2xl': '1100px',
+      },
+    },
   },
   plugins: [],
 };
+
+
+// colors: {
+//   // primary: "var(--color-primary)",
+//   primary: "tomato",
+//   secondary: "var(--color-secondary)",
+//   white: "var(--color-white)",
+//   "bg-primary": "var(--color-bg-primary)",
+//   "bg-secondary": "var(--color-bg-secondary)",
+//   "text-main": "var(--color-text-main)",
+//   "border-main": "var(--color-border-main)",
+// },
