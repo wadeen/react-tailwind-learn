@@ -7,7 +7,7 @@ type Props = {
 
 const GlobalLayout: React.FC<Props> = ({ children }) => {
   return (
-    <div className="flex min-h-screen flex-col bg-bg-secondary">
+    <div className="flex min-h-screen flex-col">
       <a href="#mainContainer" className="c-visually-hidden">
         本文へ移動
       </a>

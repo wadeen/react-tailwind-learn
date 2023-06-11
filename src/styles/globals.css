@@ -8,6 +8,7 @@
     --color-primary: "#222222";
     --color-secondary: "#525252",
     --color-white: "#FFFFFF",
+    --color-black: "#000000",
     --color-bg-primary: "#F2F2F2",
     --color-bg-secondary: "#F0F0F0",
     --color-text-main: "#333333",
@@ -17,9 +18,10 @@
   body {
     /* デフォルトのフォント */
     font-family: "游ゴシック体", "Yu Gothic", "YuGothic", "sans-serif";
+
+    /* デフォルトのテキストカラー */
+    color: #333333;
   }
-
-
 
   /* スクリーンリーダー用のテキスト */
   .c-visually-hidden {
