@@ -1,28 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
 
     // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {},
     colors: {
-      primary: "#222222",
-      secondary: "#525252",
-      white: "#FFFFFF",
-      "bg-primary": "#F2F2F2",
-      "bg-secondary": "#F0F0F0",
-      "text-main": "#333333",
-      "border-main": "#DDDDDD",
-      "tomato": "tomato"
+      primary: '#222222',
+      secondary: '#525252',
+      white: '#FFFFFF',
+      'bg-primary': '#F2F2F2',
+      'bg-secondary': '#F0F0F0',
+      'text-main': '#333333',
+      'border-main': '#DDDDDD',
+      tomato: 'tomato',
     },
     fontFamily: {
-      monster: ['Montserrat', "sans-serif"],
-      gothic: [ "游ゴシック体", "Yu Gothic", "YuGothic", "sans-serif"],
+      monster: ['Montserrat', 'sans-serif'],
+      gothic: ['游ゴシック体', 'Yu Gothic', 'YuGothic', 'sans-serif'],
     },
     fontSize: {
       // 1 ~ 100px
@@ -46,7 +46,6 @@ module.exports = {
   },
   plugins: [],
 };
-
 
 // colors: {
 //   // primary: "var(--color-primary)",
