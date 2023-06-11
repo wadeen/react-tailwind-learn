@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { pagesPath, staticPath } from '../../utils/$path';
 import TitleComponent from '@/components/title';
 import ButtonLink from '@/components/button';
+import CardLayout from '@/components/cardLayout';
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
       {/* KV */}
       <section className="relative mb-20  h-[666px] max-w-[1440px] ">
         <span className="absolute right-0 z-0  ml-auto block h-full w-[75.467vw] bg-primary" />
-        <div className="relative z-10">
+        <div className="z-1 relative">
           <div className="relative h-[580px] w-[73.467vw]  ">
             <Image
               src={staticPath.kv_jpg}
@@ -48,6 +49,40 @@ const Home = () => {
           </p>
           <ButtonLink href={pagesPath.$url()} />
         </div>
+      </section>
+
+      {/* ~two sections~ */}
+      <div className="mb-10 grid grid-rows-2 gap-y-10 bg-gray px-5 pb-10 pt-10">
+        {/* Works */}
+        <CardLayout
+          title="works"
+          img={{
+            alt: '',
+            path: staticPath.works_jpg,
+          }}
+          button={{
+            link: pagesPath.$url(),
+          }}
+          description="DIGSMILEの制作実績を紹介します。"
+        />
+        {/* Culture */}
+        <CardLayout
+          title="culture"
+          img={{
+            alt: '',
+            path: staticPath.culture_jpg,
+          }}
+          button={{
+            link: pagesPath.$url(),
+          }}
+          description="DIGSMILEの社内文化について紹介します。"
+        />
+      </div>
+
+      {/* Latest topics */}
+      <section>
+        <TitleComponent text="latest topics" className="mb-6" />
+        
       </section>
     </div>
   );

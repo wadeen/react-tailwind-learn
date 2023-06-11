@@ -4,8 +4,8 @@ import { pagesPath, staticPath } from '../../../../utils/$path';
 
 const GlobalHeader = () => {
   return (
-    <header className="w-ful z-100 fixed">
-      <div className="h-14 container mx-auto flex items-center justify-between px-4">
+    <header className="fixed z-10 w-full">
+      <div className="container z-10 mx-auto flex h-14 items-center justify-between px-4">
         <h1>
           <Link href={pagesPath.$url()}>
             <Image
@@ -18,9 +18,7 @@ const GlobalHeader = () => {
           </Link>
         </h1>
         <div>
-          <span className="bg-tomato text-bodySmall/none uppercase text-white">
-            menu
-          </span>
+          <span className="text-bodySmall/none uppercase text-white">menu</span>
         </div>
       </div>
     </header>
