@@ -22,7 +22,7 @@ module.exports = {
         ),
         // Text sizes:
         // memo: font-body/none などでline-heightの上書きは可能
-        body: ['16px', '170%'],
+        body: ['16px', '200%'],
         bodySmall: ['10px', '170%'],
         caption: ['12px', '130%'],
         captionSmall: ['10px', '130%'],
@@ -52,7 +52,7 @@ module.exports = {
       white: '#FFFFFF',
       black: '#000000',
       gray: '#F2F2F2',
-      "gray-thin": '#CECECE',
+      'gray-thin': '#CECECE',
       'gray-dark': '#F0F0F0',
       'text-main': '#333333',
       'border-main': '#DDDDDD',
@@ -83,7 +83,6 @@ module.exports = {
 //   "text-main": "var(--color-text-main)",
 //   "border-main": "var(--color-border-main)",
 // },
-
 
 // default
 // screens: {
