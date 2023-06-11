@@ -10,6 +10,13 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    // Break points
+    // screens: {
+    //   sm: '480px',
+    //   md: '768px',
+    //   lg: '976px',
+    //   xl: '1440px',
+    // },
     colors: {
       primary: '#222222',
       secondary: '#525252',
@@ -42,6 +49,22 @@ module.exports = {
         // 1100pxまでしか広がらないように
         '2xl': '1100px',
       },
+    },
+
+    height: {
+      screen: ['100vh', '100dvh'],
+      auto: 'auto',
+      full: '100%',
+    },
+    minHeight: {
+      screen: ['100vh', '100dvh'],
+      auto: 'auto',
+      full: '100%',
+    },
+    maxHeight: {
+      screen: ['100vh', '100dvh'],
+      auto: 'auto',
+      full: '100%',
     },
   },
   plugins: [],
