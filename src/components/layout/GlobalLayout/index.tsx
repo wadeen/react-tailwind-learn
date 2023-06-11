@@ -8,8 +8,13 @@ type Props = {
 const GlobalLayout: React.FC<Props> = ({ children }) => {
   return (
     <div className="flex min-h-screen flex-col bg-bg-secondary">
+      <a href="#mainContainer" className="u-visually-hidden">
+        本文へ移動
+      </a>
       <GlobalHeader />
-      <main className="flex-grow">{children}</main>
+      <main className="flex-grow" id="mainContainer">
+        {children}
+      </main>
       <GlobalFooter />
     </div>
   );

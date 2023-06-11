@@ -17,6 +17,11 @@ const GlobalHeader = () => {
             <span className="u-visually-hidden">ホーム</span>
           </Link>
         </h1>
+        <div>
+          <span className="bg-tomato  text-bodySmall/none uppercase text-white">
+            menu
+          </span>
+        </div>
       </div>
     </header>
   );
