@@ -3,8 +3,30 @@ import { pagesPath, staticPath } from '../../utils/$path';
 import TitleComponent from '@/components/title';
 import ButtonLink from '@/components/button';
 import CardLayout from '@/components/cardLayout';
+import { GetStaticProps } from 'next';
+import Link from 'next/link';
 
-const Home = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await fetch('http://localhost:3000/article.json');
+  const data = await res.json();
+  return {
+    props: {
+      data: data,
+    },
+  };
+};
+
+type ArticleType = {
+  title: string;
+  date: string;
+  link: string;
+};
+
+type Props = {
+  data: ArticleType[];
+};
+
+const Home = ({ data }: Props) => {
   return (
     <div className="">
       {/* KV */}
@@ -80,9 +102,45 @@ const Home = () => {
       </div>
 
       {/* Latest topics */}
-      <section>
+      <section className="mb-10 px-5">
         <TitleComponent text="latest topics" className="mb-6" />
-        
+        <div className="mb-7">
+          {data.map((item, i) => (
+            <article key={i}>
+              <Link
+                href={item.link}
+                className="block border-b border-border-main"
+              >
+                <time
+                  dateTime={item.date}
+                  className="mb-2 text-10/none text-gray-thin"
+                >
+                  {item.date}
+                </time>
+                <h3 className="text-bold pb-2 text-12 tracking-wide">
+                  {item.title}
+                </h3>
+              </Link>
+            </article>
+          ))}
+        </div>
+        <ButtonLink href={pagesPath.$url()} />
+      </section>
+
+      {/* Contact */}
+      <section className="bg-gray px-5 py-8">
+        <div className="mb-7">
+          <Image src={staticPath.contact_jpg} alt="" width={580} height={390} />
+        </div>
+        <div>
+          <TitleComponent text="contact" className="mb-7" />
+          <p className="mb-7 text-body/8 tracking-normal">
+            制作の依頼、取材の依頼、IRや採用についての連絡・お問い合わせはコンタクトページから承っております。
+            <br />
+            まずはお気軽にご連絡ください。担当者から改めて返信いたします。
+          </p>
+          <ButtonLink href={pagesPath.$url()} />
+        </div>
       </section>
     </div>
   );

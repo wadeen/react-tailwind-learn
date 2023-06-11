@@ -5,14 +5,15 @@
 
 @layer base {
   :root {
+    /* ↓反映されないので確認する */
     --color-primary: "#222222";
     --color-secondary: "#525252",
     --color-white: "#FFFFFF",
     --color-black: "#000000",
-    --color-bg-primary: "#F2F2F2",
+    /* --color-bg-primary: "#F2F2F2",
     --color-bg-secondary: "#F0F0F0",
     --color-text-main: "#333333",
-    --color-border-main: "#DDDDDD",
+    --color-border-main: "#DDDDDD", */
   }
 
   body {
