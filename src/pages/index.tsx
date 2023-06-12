@@ -32,7 +32,7 @@ const Home = ({ data }: Props) => {
       {/* KV */}
       <section className="relative mx-auto mb-20 h-[666px] max-w-[1440px] lg:h-[740px]">
         <span
-          className="absolute right-0 z-0  ml-auto block h-full w-[75.467vw] bg-primary lg:max-w-[740px]"
+          className="absolute right-0   -z-10 ml-auto block h-full w-[75.467vw] bg-primary lg:max-w-[740px]"
           role="presentation"
         />
         <div className="z-1 relative ">
@@ -77,11 +77,8 @@ const Home = ({ data }: Props) => {
       </section>
 
       {/* ~two sections~ */}
-      <div className="mb-10  bg-gray px-5 pb-10 pt-10 lg:-z-10 lg:mt-[-100px] lg:py-44">
-        <div
-          className=" grid grid-rows-2 gap-y-10 lg:container lg:mx-auto lg:grid-cols-2 lg:grid-rows-none lg:gap-x-14
-"
-        >
+      <div className="mb-10  bg-gray px-5 pb-10 pt-10 lg:-z-10 lg:mb-14 lg:mt-[-100px] lg:pb-14 lg:pt-44">
+        <div className=" grid grid-rows-2 gap-y-10 lg:container lg:mx-auto lg:grid-cols-2 lg:grid-rows-none lg:gap-x-14">
           {/* Works */}
           <CardLayout
             title="works"
@@ -110,9 +107,9 @@ const Home = ({ data }: Props) => {
       </div>
 
       {/* Latest topics */}
-      <section className="mb-10 px-5">
+      <section className="mb-10 px-5 lg:container lg:mx-auto lg:mb-14">
         <TitleComponent text="latest topics" className="mb-6" />
-        <div className="mb-7">
+        <div className="mb-7 lg:ml-auto lg:max-w-[700px]">
           {data.map((item, i) => (
             <article key={i}>
               <Link
@@ -125,29 +122,36 @@ const Home = ({ data }: Props) => {
                 >
                   {item.date}
                 </time>
-                <h3 className="text-bold pb-2 text-12 tracking-wide">
+                <h3 className="text-bold pb-2 text-12 tracking-wide lg:text-sm">
                   {item.title}
                 </h3>
               </Link>
             </article>
           ))}
         </div>
-        <ButtonLink href={pagesPath.$url()} />
+        <ButtonLink href={pagesPath.$url()} className="lg:ml-auto" />
       </section>
 
       {/* Contact */}
       <section className="bg-gray px-5 py-8 md:pb-20 md:pt-14">
-        <figure className="mb-7 max-w-[520px]">
-          <Image src={staticPath.contact_jpg} alt="" width={580} height={390} />
-        </figure>
-        <div>
-          <TitleComponent text="contact" className="mb-7" />
-          <p className="mb-7 text-body/8 tracking-normal">
-            制作の依頼、取材の依頼、IRや採用についての連絡・お問い合わせはコンタクトページから承っております。
-            <br />
-            まずはお気軽にご連絡ください。担当者から改めて返信いたします。
-          </p>
-          <ButtonLink href={pagesPath.$url()} />
+        <div className="lg:container lg:mx-auto lg:flex lg:flex-row-reverse lg:items-center lg:gap-20">
+          <figure className="mb-7 max-w-[520px] lg:max-w-[590px]">
+            <Image
+              src={staticPath.contact_jpg}
+              alt=""
+              width={580}
+              height={390}
+            />
+          </figure>
+          <div className="lg:max-w-[440px]">
+            <TitleComponent text="contact" className="mb-7" />
+            <p className="mb-7 text-body/8 tracking-normal">
+              制作の依頼、取材の依頼、IRや採用についての連絡・お問い合わせはコンタクトページから承っております。
+              <br />
+              まずはお気軽にご連絡ください。担当者から改めて返信いたします。
+            </p>
+            <ButtonLink href={pagesPath.$url()} />
+          </div>
         </div>
       </section>
     </div>

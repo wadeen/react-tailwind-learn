@@ -16,7 +16,7 @@ const ButtonLink = ({ href, text = defaultText, className }: Props) => {
   return (
     <Link
       href={href}
-      className={`${className} grid h-9 w-40 place-content-center bg-black font-monster text-11/8 font-bold uppercase text-white`}
+      className={`${className} grid h-9 w-40 place-content-center bg-black font-monster text-11/8 font-bold uppercase text-white md:transition-opacity md:ease-out md:hover:opacity-80`}
     >
       {text}
     </Link>
