@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  experimental: false, // pathpida settings
+  experimental: {
+    appDir: false,
+  },
 };
 
 module.exports = nextConfig;

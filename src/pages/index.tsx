@@ -3,36 +3,15 @@ import { pagesPath, staticPath } from '../../utils/$path';
 import TitleComponent from '@/components/title';
 import ButtonLink from '@/components/button';
 import CardLayout from '@/components/cardLayout';
-import { GetStaticProps } from 'next';
 import Link from 'next/link';
 
-export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch('http://localhost:3000/article.json');
-  const data = await res.json();
-  return {
-    props: {
-      data: data,
-    },
-  };
-};
-
-type ArticleType = {
-  title: string;
-  date: string;
-  link: string;
-};
-
-type Props = {
-  data: ArticleType[];
-};
-
-const Home = ({ data }: Props) => {
+const Home = () => {
   return (
-    <div className="">
+    <div>
       {/* KV */}
       <section className="relative mx-auto mb-20 h-[666px] max-w-[1440px] lg:h-[740px]">
         <span
-          className="absolute right-0   -z-10 ml-auto block h-full w-[75.467vw] bg-primary lg:max-w-[740px]"
+          className="absolute right-0 -z-10 ml-auto block h-full w-[75.467vw] bg-primary lg:max-w-[740px]"
           role="presentation"
         />
         <div className="z-1 relative ">
@@ -159,3 +138,22 @@ const Home = ({ data }: Props) => {
 };
 
 export default Home;
+
+// 記事のデータ
+const data = [
+  {
+    date: '2020.03.01',
+    title: 'イベントレポート「VRクリエイター座談会 〜5Gの次に来るもの〜」',
+    link: 'http://localhost:3000/',
+  },
+  {
+    date: '2020.02.01',
+    title: 'プレスリリースのお知らせ DIGGIN’ RECORDS',
+    link: 'http://localhost:3000/',
+  },
+  {
+    date: '2020.01.01',
+    title: '新年明けましておめでとうございます',
+    link: 'http://localhost:3000/',
+  },
+];
