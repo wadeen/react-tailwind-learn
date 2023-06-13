@@ -14,6 +14,10 @@ module.exports = {
      * 設定を「上書き」する場合はtheme
      */
     extend: {
+      backgroundImage: {
+        'top-about-pc': "url('/about-bg.jpg')",
+        'top-about-sp': "url('/about-bg-sp.jpg')",
+      },
       fontSize: {
         // 1 ~ 100px
         // usage: text-1, text-2, text-3, ...

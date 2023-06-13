@@ -41,7 +41,7 @@ const Home = () => {
       </section>
 
       {/* About us */}
-      <section className="relative z-10 mx-auto bg-[url('/about-bg-sp.jpg')] bg-cover bg-center bg-no-repeat px-5 py-12 lg:container md:bg-[url('/about-bg.jpg')] lg:px-12">
+      <section className="relative z-10 mx-auto bg-top-about-sp bg-cover bg-center bg-no-repeat px-5 py-12 lg:container md:bg-top-about-pc lg:px-12">
         <div className="max-w-[590px] bg-white px-7 py-12 opacity-95 md:mx-auto lg:mx-0">
           <TitleComponent text="about us" className="mb-6" />
           <p className="mb-7 text-sm/7 md:text-body">
@@ -56,7 +56,7 @@ const Home = () => {
       </section>
 
       {/* ~two sections~ */}
-      <div className="mb-10  bg-gray px-5 pb-10 pt-10 lg:-z-10 lg:mb-14 lg:mt-[-100px] lg:pb-14 lg:pt-44">
+      <div className="mb-10  bg-gray px-5 py-10 lg:-z-10 lg:mb-14 lg:mt-[-100px] lg:pb-14 lg:pt-44">
         <div className=" grid grid-rows-2 gap-y-10 lg:container lg:mx-auto lg:grid-cols-2 lg:grid-rows-none lg:gap-x-14">
           {/* Works */}
           <CardLayout
